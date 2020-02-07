@@ -52,14 +52,14 @@ public class Complex {
     }
 
     public static void main(String[] args) {
-        Complex a = new Complex(6, 4);
-        Complex b = new Complex(8,-2);
+        Complex a = new Complex(6.5, 4);
+        Complex b = new Complex(8,-2.75);
         Complex c = new Complex(1.5);
-       // System.out.println(a.abs());
-       // System.out.println(b.abs());
-       // System.out.println(a.add(b));
-       // System.out.println(a.multiply(b));
-        System.out.println(a.addConstant(8.0));
+        System.out.println(a.abs());
+        System.out.println(b.abs());
+        System.out.println(a.add(b));
+        System.out.println(a.multiply(b));
+        System.out.println(a.addConstant(8.6));
         System.out.println(a.multiplyConstant(8.0));
         System.out.println(c.multiplyConstant(4.0));
     }
