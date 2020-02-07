@@ -33,14 +33,18 @@ public class SoccerTeam {
         if (myScore > otherScore) {
             this.wins++;
             other.losses++;
+            this.points+=3;
         }
         else if (myScore < otherScore) {
             this.losses++;
             other.wins++;
+            other.points+=3;
         }
         else {
             this.ties++;
             other.ties++;
+            this.points++;
+            other.points++;
         }
     }
 
@@ -56,6 +60,22 @@ public class SoccerTeam {
         points = 0;
     }
 
+    public static void main(String[] args) {
+        SoccerTeam red = new SoccerTeam(0, 0,0);
+        SoccerTeam blue = new SoccerTeam(0, 0,0);
+        SoccerTeam yellow = new SoccerTeam(0, 0,0);
+        SoccerTeam green = new SoccerTeam(0, 0,0);
+        startTournament();
+        red.played(blue, 3, 2); //red wins, blue loses
+        yellow.played(green, 1, 1); //yellow and green tie
+        red.played(green, 4, 4); //red and green tie
+        yellow.played(blue, 1, 2); //yellow loses, blue wins
+        System.out.println("Team Red has " + red.numberPoints() + " points.");
+        System.out.println("Team Blue has " + blue.numberPoints() + " points.");
+        System.out.println("Team Yellow has " + yellow.numberPoints() + " points.");
+        System.out.println("Team Green has " + green.numberPoints() + " points.");
+        System.out.println(getTotalGames() + " games have been played.");
+        System.out.println(getTotalGoals() + " total goals have been scored.");
 
 
 
@@ -72,20 +92,5 @@ public class SoccerTeam {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 }
