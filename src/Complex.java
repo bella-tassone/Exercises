@@ -1,3 +1,5 @@
+//Isabella Tassone              3B                  February 11, 2020
+
 public class Complex {
 
     private double real;
@@ -26,7 +28,7 @@ public class Complex {
         return sum;
     }
 
-    public Complex addConstant(double other) {
+    public Complex add(double other) { //overloaded method
         double x = (this.real + other);
         double y = this.imaginary;
         Complex sum = new Complex(x, y);
@@ -40,7 +42,7 @@ public class Complex {
         return product;
     }
 
-    public Complex multiplyConstant(double other) {
+    public Complex multiply(double other) { //overloaded method
         double a = (this.real * other);
         double b = (this.imaginary * other);
         Complex product = new Complex(a, b);
@@ -52,15 +54,27 @@ public class Complex {
     }
 
     public static void main(String[] args) {
-        Complex a = new Complex(6.5, 4);
-        Complex b = new Complex(8,-2.75);
+        Complex a = new Complex(6.5, 4.25);
+        Complex b = new Complex(1.5,2.75);
         Complex c = new Complex(1.5);
         System.out.println(a.abs());
         System.out.println(b.abs());
         System.out.println(a.add(b));
         System.out.println(a.multiply(b));
-        System.out.println(a.addConstant(8.6));
-        System.out.println(a.multiplyConstant(8.0));
-        System.out.println(c.multiplyConstant(4.0));
+        System.out.println(a.add(8.6));
+        System.out.println(a.multiply(8.0));
+        System.out.println(c.multiply(4.0));
     }
 }
+
+/* OUTPUT:
+
+7.766112283504533
+3.132491021535417
+8.0 + 7.0i
+-1.9375 + 24.25i
+15.1 + 4.25i
+52.0 + 34.0i
+6.0 + 0.0i
+
+ */

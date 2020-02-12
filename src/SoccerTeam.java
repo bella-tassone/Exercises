@@ -88,20 +88,23 @@ public class SoccerTeam {
         System.out.println("Team Green has " + green.numberPoints() + " points.");
         System.out.println(getTotalGames() + " games have been played.");
         System.out.println(getTotalGoals() + " total goals have been scored.");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
+
+/* OUTPUT:
+
+Team Red has 4 points.
+Team Blue has 3 points.
+Team Yellow has 1 points.
+Team Green has 2 points.
+4 games have been played.
+18 total goals have been scored.
+
+Team Red has 1 points.
+Team Blue has 4 points.
+Team Yellow has 3 points.
+Team Green has 3 points.
+4 games have been played.
+21 total goals have been scored.
+
+ */
