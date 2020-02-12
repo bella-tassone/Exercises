@@ -62,8 +62,10 @@ public class Complex {
         System.out.println(a.add(b));
         System.out.println(a.multiply(b));
         System.out.println(a.add(8.6));
+        System.out.println(c.add(13.3));
         System.out.println(a.multiply(8.0));
-        System.out.println(c.multiply(4.0));
+        System.out.println(b.multiply(4.5));
+        System.out.println(c.multiply(3.0));
     }
 }
 
@@ -74,7 +76,9 @@ public class Complex {
 8.0 + 7.0i
 -1.9375 + 24.25i
 15.1 + 4.25i
+14.8 + 0.0i
 52.0 + 34.0i
-6.0 + 0.0i
+6.75 + 12.375i
+4.5 + 0.0i
 
  */
